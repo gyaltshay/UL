@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="gallery" class="page-body">
+  <div class="web-accent" aria-hidden="true"></div>
+  <div class="gallery-page-bg" aria-hidden="true"></div>
+  <div id="page-transition" class="page-transition" aria-hidden="true" hidden></div>
+
+  <canvas id="particle-canvas" class="particle-canvas particle-canvas--gallery"></canvas>
+
+  <!-- Marvel Spider-Man–style swing (decorative; loops slowly) -->
+  <div class="swing-hero swing-hero--gallery" aria-hidden="true">
+    <svg class="swing-hero__svg" viewBox="0 0 56 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M28 0v14" stroke="rgba(45,74,50,0.28)" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M28 10 Q18 6 10 22" stroke="rgba(45,74,50,0.18)" stroke-width="1" fill="none" />
+      <path d="M28 36 14 44 11 70 18 74 28 70 38 74 45 70 42 44Z" fill="rgba(45,74,50,0.55)" />
+      <path
+        d="M28 40v22M17 46l22 10M39 46l-22 10"
+        stroke="rgba(255,255,255,0.14)"
+        stroke-width="0.75"
+        stroke-linecap="round"
+      />
+      <path d="M14 44l-2 26M42 44l2 26" stroke="rgba(45,74,50,0.55)" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M28 16c16 0 18 10 18 18s-8 18-18 18-18-10-18-18 2-18 18-18z" fill="rgba(40,58,44,0.72)" />
+      <path d="M28 20v28M11 32h34M14 24l28 16M42 24L14 40" stroke="rgba(0,0,0,0.08)" stroke-width="0.55" />
+      <path d="M24 28 14 26 10 33 14 40 22 36Z" fill="#e8eeea" opacity="0.92" />
+      <path d="M32 28 42 26 46 33 42 40 34 36Z" fill="#e8eeea" opacity="0.92" />
+    </svg>
+  </div>
+
+  <main class="section page-gallery">
+    <div class="container page-content">
+      <p class="gallery-lede">I really do miss this.</p>
+
+      <!-- Plays assets/music.mp3 -->
+      <div class="audio-block glass glass--elevated">
+        <audio id="memory-audio" controls preload="metadata" autoplay>
+          <source src="assets/music.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+
+      <!-- Populated by script.js: assets/image1…image10 (see CONFIG.galleryImages.extension) -->
+      <div class="gallery" id="gallery"></div>
+
+      <p class="closing">I LOVE YOU UGEY. I LOVE YOU SO SO SO SO MUCH❤️ AND I MISS YOU!</p>
+    </div>
+  </main>
+
+  <!-- Easter egg: tiny mask icon (Marvel Spidey–style lenses, not a bug) -->
+  <button type="button" class="easter-egg-icon" id="easter-egg-trigger" aria-label="Secret note" title="?">
+    <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+      <circle cx="16" cy="16" r="15" fill="rgba(61,92,68,0.25)" />
+      <path d="M16 8c6 0 7 4 7 7s-3 7-7 7-7-4-7-7 1-7 7-7z" fill="rgba(45,74,50,0.88)" />
+      <path d="M16 10v10M9 15h14" stroke="rgba(0,0,0,0.1)" stroke-width="0.4" />
+      <path d="M12 14 9 13 8 15 9 17 12 16Z" fill="#f2f6f3" />
+      <path d="M20 14 23 13 24 15 23 17 20 16Z" fill="#f2f6f3" />
+    </svg>
+  </button>
+
+  <div class="easter-egg-modal hidden" id="easter-egg-modal" role="dialog" aria-modal="true" aria-labelledby="egg-title">
+    <div class="easter-egg-inner glass glass--elevated">
+      <h3 id="egg-title">For your eyes only</h3>
+      <p id="egg-message"></p>
+      <button type="button" class="btn btn-primary" id="egg-close">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

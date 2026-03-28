@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready for my khamlosisi apology?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="entry" class="page-body">
+  <div class="web-accent" aria-hidden="true"></div>
+
+  <!-- Full-screen web transition (shared across pages) -->
+  <div id="page-transition" class="page-transition" aria-hidden="true" hidden></div>
+
+  <main class="section landing">
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+    <!-- Swing hero: optional real art via assets/spidey-hero.png + script.js CONFIG (SVG fallback) -->
+    <div class="swing-hero" aria-hidden="true">
+      <svg class="swing-hero__svg" viewBox="0 0 56 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28 0v14" stroke="rgba(45,74,50,0.42)" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M28 10 Q18 6 10 22" stroke="rgba(45,74,50,0.26)" stroke-width="1" fill="none" />
+        <path
+          d="M28 36 14 44 11 70 18 74 28 70 38 74 45 70 42 44Z"
+          fill="rgba(45,74,50,0.9)"
+        />
+        <path
+          d="M28 40v22M17 46l22 10M39 46l-22 10"
+          stroke="rgba(255,255,255,0.2)"
+          stroke-width="0.75"
+          stroke-linecap="round"
+        />
+        <path d="M14 44l-2 26M42 44l2 26" stroke="rgba(45,74,50,0.9)" stroke-width="3.5" stroke-linecap="round" />
+        <path
+          d="M28 16c16 0 18 10 18 18s-8 18-18 18-18-10-18-18 2-18 18-18z"
+          fill="rgba(40,58,44,0.96)"
+        />
+        <path
+          d="M28 20v28M11 32h34M14 24l28 16M42 24L14 40"
+          stroke="rgba(0,0,0,0.11)"
+          stroke-width="0.55"
+        />
+        <path d="M24 28 14 26 10 33 14 40 22 36Z" fill="#f2f6f3" />
+        <path d="M32 28 42 26 46 33 42 40 34 36Z" fill="#f2f6f3" />
+      </svg>
+    </div>
+
+    <div class="landing-inner glass glass--hero page-content">
+      <h1 class="landing-title fade-in">Ready for my khamlosisi apology?</h1>
+      <span class="landing-rule fade-in" aria-hidden="true"></span>
+      <p id="entry-hint" class="landing-hint fade-in">
+        Cold month, double twelves — eight digits in a row, no spaces, no symbols.
+      </p>
+      <form id="entry-form" class="entry-form fade-in" autocomplete="off" novalidate>
+        <label class="sr-only" for="entry-password">Password</label>
+        <input
+          type="password"
+          id="entry-password"
+          class="entry-input"
+          inputmode="numeric"
+          maxlength="16"
+          placeholder="••••••••"
+          aria-describedby="entry-hint"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn-primary btn-shine" id="btn-enter">Enter</button>
+      </form>
+      <p id="entry-error" class="entry-error" role="status" aria-live="polite" hidden></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

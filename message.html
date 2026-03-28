@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ugey?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="message" class="page-body">
+  <div class="web-accent web-accent--message" aria-hidden="true"></div>
+  <div id="page-transition" class="page-transition" aria-hidden="true" hidden></div>
+
+  <main class="section page-message">
+    <div class="container page-content">
+      <h2 class="section-label">Ugey?</h2>
+      <p class="apology-text" aria-live="polite">
+        <span id="apology-typed"></span><span class="typing-cursor" id="typing-cursor" hidden>|</span>
+      </p>
+      <button type="button" class="btn btn-primary btn-shine" id="btn-continue">Continue</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
